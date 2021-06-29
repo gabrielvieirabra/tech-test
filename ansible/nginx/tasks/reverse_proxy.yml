@@ -1,0 +1,10 @@
+---
+- name: copy file
+  ansible.builtin.copy:
+    src: "{{ role_path }}/files/reverse-proxy.conf"
+    dest: /etc/nginx/conf.d/reverse-proxy.conf
+  
+- name: default virtual host
+  ansible.builtin.file:
+    path: "/etc/nginx/conf.d/virtual.conf"
+    state: absent

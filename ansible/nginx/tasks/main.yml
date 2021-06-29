@@ -1,0 +1,5 @@
+---
+# tasks file for nginx
+
+- include_tasks: install_nginx.yml
+- include_tasks: reverse_proxy.yml

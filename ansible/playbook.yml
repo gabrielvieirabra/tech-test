@@ -1,0 +1,5 @@
+- hosts: frontend
+  become: true
+
+  roles:
+    - {role: nginx}
